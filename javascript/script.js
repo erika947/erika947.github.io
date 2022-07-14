@@ -8,3 +8,6 @@
 //player 1 picks first
 //player 1 is the starfish
 //the round will keep going until either one wins or it is a tie
+
+const title = document.querySelector('#gameTitle')
+const gameBoxes = document.querySelectorAll('.box')

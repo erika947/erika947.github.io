@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+
 body{
     background-image: url(images/under-the-sea-vector-32.png);
     background-repeat: no-repeat;
@@ -9,4 +12,48 @@ body{
 /* create the border of the game 3 x 3
 find the palette colors that will be used
 choose a font that is readable */
+/* title name at the top saying "tic tac toe" */
+/* add some style to the font
+as well with trying to make the x's and o's to starfishes and sand dollars*/
 
+
+#gameTitle{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 90px;
+    background: -webkit-linear-gradient(rgb(149, 241, 241), rgb(242, 239, 158));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: antiquewhite;
+    font-style: italic;
+    
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#board{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    font-size: 100px;
+    margin-top: 40px;
+}
+
+.box{
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    color: #dbdfac;
+
+}
