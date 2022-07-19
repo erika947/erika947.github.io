@@ -7,6 +7,7 @@ body{
     background-size: 1900px;
     background-position: -400px;
     background-attachment: fixed;
+    cursor: url('images/cursor.cur'),auto;
 }
 
 /* create the border of the game 3 x 3
@@ -41,19 +42,35 @@ as well with trying to make the x's and o's to starfishes and sand dollars*/
 }
 
 #board{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
     width: 60vw;
     font-size: 100px;
     margin-top: 40px;
+    
 }
 
 .box{
-    display: flex;
+    display: grid;
     height: 200px;
     width: 200px;
     justify-content: center;
     align-items: center;
     color: #dbdfac;
+    box-shadow: 2px 2px 2px 2px #22497d;
+    
 
+}
+
+
+.starfish::before{
+    content: url(/images/Starfish.png);
+
+}
+
+.sandDollar::before{
+    content: url(/images/SandDollar.png);
+    
 }
