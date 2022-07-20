@@ -107,6 +107,3 @@ for(const gameBoxe of gameBoxes){
 }
 
 resetDiv.addEventListener('click',fullReset)//allow the reset button to work totgether with line 24
-
-
-
