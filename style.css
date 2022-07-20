@@ -1,15 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
-
-
-body{
-    background-image: url(images/under-the-sea-vector-32.png);
-    background-repeat: no-repeat;
-    background-size: 1900px;
-    background-position: -400px;
-    background-attachment: fixed;
-    cursor: url('images/cursor.cur'),auto;
-}
-
 /* create the border of the game 3 x 3
 find the palette colors that will be used
 choose a font that is readable */
@@ -17,11 +5,24 @@ choose a font that is readable */
 /* add some style to the font
 as well with trying to make the x's and o's to starfishes and sand dollars*/
 
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+
+body{
+    background-image: url(images/stylus-hex-bg-sea-color-final.jpg);
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    /* background-position: -400px; */
+    background-attachment: fixed, scroll;
+    
+    cursor: url('images/cursor.cur'),auto;
+}
+
 
 #gameTitle{
     font-family: 'Bubblegum Sans', cursive;
-    font-size: 90px;
-    background: -webkit-linear-gradient(rgb(149, 241, 241), rgb(242, 239, 158));
+    font-size: 80px;
+    background: -webkit-linear-gradient(#22497d, rgb(0, 156, 156));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
     margin: 0;
@@ -29,6 +30,32 @@ as well with trying to make the x's and o's to starfishes and sand dollars*/
     text-align: center;
     color: antiquewhite;
     font-style: italic;
+    height: 10vh;
+}
+
+.statusHere{
+    display: flex;
+    margin-top: 25px;
+    font-size: 30px;
+    font-family: 'Bubblegum Sans', cursive;
+    font-style:italic;
+    color: #22497d;
+    
+}
+
+.reset{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 30px;
+    cursor: pointer;
+    color: aliceblue;
+    border: 2px;
+    padding: 10px 0px;
+    background: #22497d;
+    width: 150px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #ffffff;
+    text-align: center;
+    margin-top: 20px;
     
 }
 
@@ -46,7 +73,7 @@ as well with trying to make the x's and o's to starfishes and sand dollars*/
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 15px;
-    width: 60vw;
+
     font-size: 100px;
     margin-top: 40px;
     
@@ -54,8 +81,8 @@ as well with trying to make the x's and o's to starfishes and sand dollars*/
 
 .box{
     display: grid;
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 175px;
     justify-content: center;
     align-items: center;
     color: #dbdfac;
@@ -65,12 +92,26 @@ as well with trying to make the x's and o's to starfishes and sand dollars*/
 }
 
 
-.starfish::before{
-    content: url(/images/Starfish.png);
+button{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 30px;
+    cursor: pointer;
+    color: aliceblue;
+    border: 2px;
+    padding: 10px 0px;
+    background: #22497d;
+    width: 150px;
+    border-radius: 25px;
+    box-shadow: 0 0 5px #016fff;
+}
 
+
+.starfish::before{
+    content: url(/images/New-Starfish.png);
+    margin-top: 10px;
 }
 
 .sandDollar::before{
-    content: url(/images/SandDollar.png);
-    
+    content: url(/images/New-SandDollar.png);
+    margin-top: 10px;
 }
