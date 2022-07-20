@@ -31,7 +31,7 @@ const fullReset = (e) => {
 }
 //Create a function that updates the Status bar
 
-const playerStatus = (team) => {}//fill out
+const playerStatus = (team) => team === 'StarFish' ? player1 : player2
 
 const whoWon = (team) => {
     gameLive = false
@@ -73,7 +73,23 @@ const statusCheck = () => {
     }else if(topR && topR === midR && topR === bottomR){//Right Column
         whoWon(topR)
 
-    }//add rest of the combinations as well the outcome for a draw
+    }else if(topL && topL === midM && topL === bottomR){//Left to Right Diagonal
+        whoWon(topL)
+
+    }else if(topR && topR === midM && topR === bottomL){//Right to Left Diagonal
+        whoWon(topR)
+        
+    }else if(topL && topM && topR && midL && midM && midR && bottomL && bottomM && bottomR){
+        gameLive = false
+        statusDiv.innerHTML = "It's a Draw!"
+    } else{
+        starfishStarts = !starfishStarts
+        if(starfishStarts){
+        statusDiv.innerHTML = `${player1} turn`
+    }else{
+        statusDiv.innerHTML = `${player2} turn`
+        }
+    }    
 }
 //create a function to click in the squares
 const boxclick = (e) =>{
@@ -102,5 +118,5 @@ for(const gameBoxe of gameBoxes){
 
 resetDiv.addEventListener('click',fullReset)
 
-
+// these are the postions of where the player can win
 
