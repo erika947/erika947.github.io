@@ -1,14 +1,11 @@
-# erika947.github.io
-```
-Copy the Top link and paste into your web browser and hit enter. This should bring you to a new website with the game ready to play.
-```
-# Project Title
-
-A brief description of what this project does and who it's for
-
 # Tic Tac Toe
 
 This is a Classic game that can be played with pen and paper but has now been turned into a mini game online.
+
+# Link
+Click here to open up the game page:
+* [Game link](https://erika947.github.io/)
+
 
 ## Rules 
 - The game will need two Players
@@ -40,6 +37,11 @@ The Theme that I decided to go with is Under the Sea. There are various elements
 * [VSCode](https://code.visualstudio.com/Download) - For HTML, CSS, and JavaScript
 * [Google](https://www.google.com/) - Google Images, Mouse crusor
 * [Youtube](https://www.youtube.com/watch?v=p7oVVBW_BHw&t=499s) - Used for Bubble Audio
+* [Procreate](https://procreate.art/) - To draw and create my wireframe
 
+## Things I want to work on
+- The Reset buttom to pop up as a transparent screen with who one
+- Who wins to also to pop up on that screen and give out the correct winner
+- Add bubbles animation to either screen or crusor
 
 

@@ -30,29 +30,19 @@ const fullReset = (e) => {
     }
 }
 //Create a function that updates the Status bar
-
-
-const whoWon = (team) => {
-    gameLive = false
-    if (team === 'StarFish'){
-        statusDiv.innerText = `${playerStatus(team)} has won`//status will up to let know who won
-    }else {
-        statusDiv.innerText = `${playerStatus(team)} has won!`;
-        }
-    }
-
+const playerStatus = (team) => team === 'player 1' ? player1 : player2
 
 // this will check the postions of where the player can win
 const statusCheck = () => {
-    const topL = gameBoxes[0].classList[2]
-    const topM = gameBoxes[1].classList[2]
-    const topR = gameBoxes[2].classList[2]
-    const midL = gameBoxes[3].classList[2]
-    const midM = gameBoxes[4].classList[2]
-    const midR = gameBoxes[5].classList[2]
-    const bottomL = gameBoxes[6].classList[2]
-    const bottomM = gameBoxes[7].classList[2]
-    const bottomR = gameBoxes[8].classList[2]
+    const topL = gameBoxes[0].classList[1]
+    const topM = gameBoxes[1].classList[1]
+    const topR = gameBoxes[2].classList[1]
+    const midL = gameBoxes[3].classList[1]
+    const midM = gameBoxes[4].classList[1]
+    const midR = gameBoxes[5].classList[1]
+    const bottomL = gameBoxes[6].classList[1]
+    const bottomM = gameBoxes[7].classList[1]
+    const bottomR = gameBoxes[8].classList[1]
     // check for the winner
     if(topL && topL === topM && topL === topR){//top row
     whoWon(topL)
@@ -81,10 +71,12 @@ const statusCheck = () => {
     }else if(topL && topM && topR && midL && midM && midR && bottomL && bottomM && bottomR){
         gameLive = false
         statusDiv.innerHTML = "It's a Draw!"
+
     } else{
         starfishStarts = !starfishStarts
         if(starfishStarts){
         statusDiv.innerHTML = `${player1} turn`
+
     }else{
         statusDiv.innerHTML = `${player2} turn`
         }
@@ -94,8 +86,7 @@ const statusCheck = () => {
 const boxclick = (e) =>{
     const listTurn = e.target.classList
 
-
-    if (listTurn[2] === 'starfish' || listTurn[2] === 'sandDollar'){//this allows only one player to place in this square
+    if (listTurn[1] === 'starfish' || listTurn[1] === 'sandDollar'){//this allows only one player to place in this square
         return
     }
 
@@ -112,10 +103,10 @@ const boxclick = (e) =>{
 }
 
 for(const gameBoxe of gameBoxes){
-    gameBoxe.addEventListener('click', boxclick)
+    gameBoxe.addEventListener('click', boxclick)//allows for the clicks to be register so the images knows where to be placed.
 }
 
-resetDiv.addEventListener('click',fullReset)
+resetDiv.addEventListener('click',fullReset)//allow the reset button to work totgether with line 24
 
-// these are the postions of where the player can win
+
 
