@@ -31,12 +31,11 @@ const fullReset = (e) => {
 }
 //Create a function that updates the Status bar
 
-const playerStatus = (team) => team === 'StarFish' ? player1 : player2
 
 const whoWon = (team) => {
     gameLive = false
     if (team === 'StarFish'){
-        statusDiv.innerText = `${playerStatus(team)} has won`
+        statusDiv.innerText = `${playerStatus(team)} has won`//status will up to let know who won
     }else {
         statusDiv.innerText = `${playerStatus(team)} has won!`;
         }

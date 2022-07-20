@@ -1,6 +1,7 @@
 # erika947.github.io
-
-
+```
+Copy the Top link and paste into your web browser and hit enter. This should bring you to a new website with the game ready to play.
+```
 # Project Title
 
 A brief description of what this project does and who it's for
